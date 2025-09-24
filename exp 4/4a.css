@@ -1,0 +1,53 @@
+
+#unique {
+  font-weight: bold;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+* {
+  font-family: Arial, sans-serif;
+}
+
+
+ul > li {
+  list-style-type: square;
+}
+
+h1 + h2 {
+  color: green;
+}
+
+h2 ~ p {
+  font-style: italic;
+}
+
+a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+ul li:first-child {
+  font-weight: bold;
+}
+
+p::first-letter {
+  font-size: 200%;
+  color: purple;
+}
+
+h2::before {
+  content: "★ ";
+  color: red;
+}
+
+input[type="text"] {
+  border: 2px solid blue;
+  padding: 5px;
+}
+
+a[target="_blank"] {
+  color: darkred;
+}
