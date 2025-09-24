@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.name-color {
+  color: red; 
+}
+
+.hex-color {
+  color: #00FF00; 
+}
+
+.rgb-color {
+  color: rgb(0, 0, 255);
+}
+
+.rgba-color {
+  color: rgba(255, 0, 0, 0.5); 
+}
+
+.hsl-color {
+  color: hsl(120, 100%, 25%); 
+}
+
+.hsla-color {
+  color: hsla(240, 100%, 50%, 0.7); 
+}
+
+.bg-color {
+  background-color: #FFD700; 
+  padding: 10px;
+  margin-top: 10px;
+}

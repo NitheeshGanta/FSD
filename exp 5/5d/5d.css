@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.box {
+  width: 200px;
+  height: 100px;
+  
+  /* Content area is the text inside the box */
+  background-color: lightblue;
+
+  /* Padding adds space inside the box around the content */
+  padding: 20px;
+
+  /* Border surrounds the padding and content */
+  border: 5px solid blue;
+
+  /* Margin adds space outside the border */
+  margin: 30px;
+
+  /* Optional: show box-sizing for better understanding */
+  box-sizing: content-box; /* default, width & height = content only */
+}
