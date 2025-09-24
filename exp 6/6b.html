@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Output Methods</title>
+  <script src="output.js"></script>
+</head>
+<body>
+
+  <h1>Different Ways to Display Output in JavaScript</h1>
+
+  <button onclick="showAlert()">Alert Output</button>
+  <button onclick="showConsole()">Console Output</button>
+  <button onclick="showDocument()">Document Output</button>
+  <button onclick="showInnerHTML()">InnerHTML Output</button>
+
+  <p id="output"></p>
+
+  <script>
+    function showAlert() {
+      alert("This is displayed using alert()");
+    }
+
+    function showConsole() {
+      console.log("This is displayed in the console using console.log()");
+    }
+
+    function showDocument() {
+      document.write("This is displayed using document.write()");
+    }
+
+    function showInnerHTML() {
+      document.getElementById("output").innerHTML = "This is displayed using innerHTML";
+    }
+  </script>
+
+</body>
+</html>
