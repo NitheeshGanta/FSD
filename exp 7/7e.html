@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String Object Example</title>
+</head>
+<body>
+  <h1>String Object Demo</h1>
+  <button onclick="showStringOperations()">Run String Operations</button>
+  <div id="output"></div>
+  <script>
+    function showStringOperations() {
+      var text = "  Hello JavaScript World  ";
+      var output = document.getElementById("output");
+      var length = text.length;
+      var upper = text.toUpperCase();
+      var lower = text.toLowerCase();
+      var trimmed = text.trim();
+      var sliced = text.slice(2, 7);
+      var replaced = text.replace("JavaScript", "JS");
+      var includes = text.includes("World");
+      var index = text.indexOf("JavaScript");
+      var starts = text.startsWith("  He");
+      var ends = text.endsWith("  ");
+      var char = text.charAt(6);
+      var split = text.trim().split(" ");
+      output.innerHTML =
+        "Original: '" + text + "'<br>" +
+        "Length: " + length + "<br>" +
+        "Uppercase: " + upper + "<br>" +
+        "Lowercase: " + lower + "<br>" +
+        "Trimmed: '" + trimmed + "'<br>" +
+        "Slice(2,7): '" + sliced + "'<br>" +
+        "Replaced: " + replaced + "<br>" +
+        "Includes 'World': " + includes + "<br>" +
+        "Index of 'JavaScript': " + index + "<br>" +
+        "Starts with '  He': " + starts + "<br>" +
+        "Ends with '  ': " + ends + "<br>" +
+        "Char at index 6: '" + char + "'<br>" +
+        "Split (by space): " + split;
+    }
+  </script>
+</body>
+</html>

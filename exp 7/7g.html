@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Object Example</title>
+</head>
+<body>
+  <h1>Date Object Demo</h1>
+  <button onclick="showDateInfo()">Show Date Info</button>
+  <div id="output"></div>
+  <script>
+    function showDateInfo() {
+      var now = new Date();
+      var output = document.getElementById("output");
+      var year = now.getFullYear();
+      var month = now.getMonth() + 1;
+      var date = now.getDate();
+      var day = now.getDay();
+      var hours = now.getHours();
+      var minutes = now.getMinutes();
+      var seconds = now.getSeconds();
+      var milliseconds = now.getMilliseconds();
+      var time = now.getTime();
+      var isoString = now.toISOString();
+      var localeString = now.toLocaleString();
+      output.innerHTML =
+        "Current Date and Time: " + localeString + "<br>" +
+        "Year: " + year + "<br>" +
+        "Month: " + month + "<br>" +
+        "Date: " + date + "<br>" +
+        "Day of Week (0=Sun): " + day + "<br>" +
+        "Hours: " + hours + "<br>" +
+        "Minutes: " + minutes + "<br>" +
+        "Seconds: " + seconds + "<br>" +
+        "Milliseconds: " + milliseconds + "<br>" +
+        "Timestamp (ms since 1970): " + time + "<br>" +
+        "ISO String: " + isoString;
+    }
+  </script>
+</body>
+</html>

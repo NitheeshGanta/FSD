@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Math Object Example</title>
+</head>
+<body>
+  <h1>Math Object Demo</h1>
+  <button onclick="showMathOperations()">Run Math Operations</button>
+  <div id="output"></div>
+  <script>
+    function showMathOperations() {
+      var output = document.getElementById("output");
+      var pi = Math.PI;
+      var e = Math.E;
+      var sqrt = Math.sqrt(144);
+      var power = Math.pow(2, 5);
+      var round = Math.round(4.6);
+      var floor = Math.floor(4.9);
+      var ceil = Math.ceil(4.1);
+      var abs = Math.abs(-42);
+      var min = Math.min(3, 7, -2, 10);
+      var max = Math.max(3, 7, -2, 10);
+      var random = Math.random();
+      var sin = Math.sin(Math.PI / 2);
+      output.innerHTML =
+        "PI: " + pi + "<br>" +
+        "E: " + e + "<br>" +
+        "Sqrt(144): " + sqrt + "<br>" +
+        "2^5: " + power + "<br>" +
+        "Round(4.6): " + round + "<br>" +
+        "Floor(4.9): " + floor + "<br>" +
+        "Ceil(4.1): " + ceil + "<br>" +
+        "Abs(-42): " + abs + "<br>" +
+        "Min(3,7,-2,10): " + min + "<br>" +
+        "Max(3,7,-2,10): " + max + "<br>" +
+        "Random (0–1): " + random + "<br>" +
+        "Sin(π / 2): " + sin;
+    }
+  </script>
+</body>
+</html>

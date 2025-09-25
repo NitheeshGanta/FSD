@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RegExp Object Example</title>
+</head>
+<body>
+  <h1>RegExp Object Demo</h1>
+  <button onclick="runRegexDemo()">Run RegExp Operations</button>
+  <div id="output"></div>
+  <script>
+    function runRegexDemo() {
+      var text = "The rain in SPAIN stays mainly in the plain.";
+      var pattern = /ain/gi;
+      var output = document.getElementById("output");
+      var testResult = pattern.test(text);
+      var execResult = pattern.exec(text);
+      var matchResult = text.match(pattern);
+      var searchResult = text.search(pattern);
+      var replaceResult = text.replace(pattern, "***");
+      output.innerHTML =
+        "Text: " + text + "<br>" +
+        "Pattern: " +pattern+ "<br>" +
+        "Test result: " + testResult + "<br>" +
+        "Exec result: " + execResult + "<br>" +
+        "Match result: " + matchResult + "<br>" +
+        "Search result (first match index): " + searchResult + "<br>" +
+        "Replace result: " + replaceResult;
+    }
+  </script>
+</body>
+</html>

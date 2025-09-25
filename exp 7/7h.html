@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User-Defined Object Example - Distance</title>
+</head>
+<body>
+  <h1>User-Defined Object Demo - Distance</h1>
+  <button onclick="createAndDisplayDistance()">Create and Display Distance</button>
+
+  <div id="output"></div>
+
+  <script>
+    function Distance(kilometers) {
+      this.kilometers = kilometers;
+
+      this.display = function() {
+        return "Distance: " + this.kilometers.toFixed(2) + " km";
+      };
+    }
+
+    Object.defineProperty(Distance.prototype, 'miles', {
+      get: function() {
+        return this.kilometers * 0.621371;
+      },
+      set: function(miles) {
+        this.kilometers = miles / 0.621371;
+      }
+    });
+
+    function createAndDisplayDistance() {
+      var dist = new Distance(10);
+      var output = document.getElementById("output");
+      var info = dist.display();
+      info += "<br>Distance in miles: " + dist.miles.toFixed(2);
+      dist.miles = 15;
+      info += "<br>Updated distance in km (after setting miles to 15): " + dist.kilometers.toFixed(2);
+      output.innerHTML = info;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Example</title>
+</head>
+<body>
+  <h1 id="main-heading">Welcome to My Page</h1>
+  <p id="description">This is a sample description.</p>
+  <button onclick="changeContent()">Click Me</button>
+
+  <script>
+    function changeContent() {
+      var heading = document.getElementById("main-heading").style.color = "red";
+      var para = document.getElementById("description").style.fontSize = "30px";
+      heading.innerHTML = "You clicked the button!";
+      para.innerHTML = "The content has been changed using the DOM.";
+      var newElement = document.createElement("h2");
+      newElement.innerHTML = "This is a new sub heading added dynamically.";
+      document.body.appendChild(newElement);
+      newElement.style.backgroundColor = "lightblue";
+    }
+  </script>
+</body>
+</html>

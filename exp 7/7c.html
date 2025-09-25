@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Object Example</title>
+</head>
+<body>
+  <h1>Array Object Demo</h1>
+  <button onclick="showArrayInfo()">Run Array Operations</button>
+
+  <div id="output"></div>
+
+  <script>
+    function showArrayInfo() {
+      var fruits = ["Apple", "Banana", "Cherry"];
+      var output = document.getElementById("output");
+      var initial = fruits.slice();
+      fruits.push("Dragonfruit");
+      var afterPush = fruits.slice();
+      fruits.unshift("Mango");
+      var afterUnshift = fruits.slice();
+      var removedLast = fruits.pop();
+      var afterPop = fruits.slice();
+      var removedFirst = fruits.shift();
+      var afterShift = fruits.slice();
+      var joined = fruits.join(", ");
+      var length = fruits.length;
+      var reversed = fruits.slice().reverse();
+      var sorted = fruits.slice().sort();
+      output.innerHTML =
+        "Initial: " + initial + "<br>" +
+        "After push: " + afterPush + "<br>" +
+        "After unshift: " + afterUnshift + "<br>" +
+        "After pop (removed: " + removedLast + "): " + afterPop + "<br>" +
+        "After shift (removed: " + removedFirst + "): " + afterShift + "<br>" +
+        "Joined: " + joined + "<br>" +
+        "Length: " + length + "<br>" +
+        "Reversed: " + reversed + "<br>" +
+        "Sorted: " + sorted;
+    }
+  </script>
+</body>
+</html>
