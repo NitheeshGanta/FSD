@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thumbnail Gallery</title>
+  <style>
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .gallery a img {
+      width: 100px;
+      height: 100px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center;">Thumbnail Image Gallery</h1>
+  <div class="gallery">
+    <a href="mountain.jpg" target="_blank">
+      <img src="mountain.jpg" alt="Mountain View">
+    </a>
+    <a href="ocean.jpg" target="_blank">
+      <img src="ocean.jpg" alt="Ocean View">
+    </a>
+    <a href="desertdunes.jpg" target="_blank">
+      <img src="desertdunes.jpg" alt="Desert Dunes">
+    </a>
+    <a href="./sunset.jpg" target="_blank">
+      <img src="./sunset.jpg" alt="Desert Dunes">
+    </a>
+  </div>
+</body>
+</html>
