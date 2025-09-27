@@ -5,7 +5,6 @@
   width: 600px;        
   height: 400px;    
   background-image: url('https://www.diariodasaude.com.br/news/imgs/010130171208-o-que-significa-natureza.jpg');     
-  background-size: cover;  
   opacity: 0.2;
   background-position: center;
   transform: translate(-50%, -50%) rotate(-10deg); 
@@ -14,3 +13,4 @@
 .content {
   min-height: 150vh;
 }
+
