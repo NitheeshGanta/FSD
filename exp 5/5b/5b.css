@@ -1,24 +1,16 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: Arial, sans-serif;
-}
-
 .background-image {
   position: fixed;      
   top: 50%;             
   left: 50%;            
   width: 600px;        
-  height: 400px;        
-  background-image: url('https://www.diariodasaude.com.br/news/imgs/010130171208-o-que-significa-natureza.jpg'); 
+  height: 400px;    
+  background-image: url('https://www.diariodasaude.com.br/news/imgs/010130171208-o-que-significa-natureza.jpg');     
   background-size: cover;  
-  background-repeat: no-repeat;
+  opacity: 0.2;
   background-position: center;
   transform: translate(-50%, -50%) rotate(-10deg); 
   z-index: -1;          
 }
-
 .content {
-  padding: 20px;
+  min-height: 150vh;
 }
