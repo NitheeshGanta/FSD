@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Loop through Object Data</title>
+</head>
+<body>
+
+  <h2>for-in loop (object keys)</h2>
+  <div id="forIn"></div>
+
+  <h2>forEach loop (on values array)</h2>
+  <div id="forEach"></div>
+
+  <h2>for-of loop (on values array)</h2>
+  <div id="forOf"></div>
+
+<script>
+  const obj = {
+    name: "Alice",
+    age: 30,
+    city: "New York"
+  };
+
+  let outputForIn = "";
+  for (let key in obj) {
+    outputForIn += `${key}: ${obj[key]}<br>`;
+  }
+  document.getElementById("forIn").innerHTML = outputForIn;
+
+  const values = Object.values(obj);
+  let outputForEach = "";
+  values.forEach(value => {
+    outputForEach += value + "<br>";
+  });
+  document.getElementById("forEach").innerHTML = outputForEach;
+
+  let outputForOf = "";
+  for (const value of values) {
+    outputForOf += value + "<br>";
+  }
+  document.getElementById("forOf").innerHTML = outputForOf;
+</script>
+
+</body>
+</html>

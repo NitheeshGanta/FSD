@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Denomination Calculator</title>
+</head>
+<body>
+  <h3>Enter Amount:</h3>
+  <input type="number" id="amount" min="1" />
+  <button onclick="calculate()">Calculate</button>
+
+  <p id="output"></p>
+
+  <script>
+    function calculate() {
+      let amount = parseInt(document.getElementById('amount').value);
+      if (isNaN(amount) || amount <= 0) {
+        document.getElementById('output').innerText = "Enter a valid amount.";
+        return;
+      }
+
+      const denominations = [100, 50, 20, 10, 5, 2, 1];
+      let result = [];
+
+      for (let d of denominations) {
+        let count = Math.floor(amount / d);
+        if (count > 0) {
+          result.push(count + "-" + d + "'s");
+          amount %= d;
+        }
+      }
+
+      document.getElementById('output').innerText = result.join(", ");
+    }
+  </script>
+</body>
+</html>
